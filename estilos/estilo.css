@@ -1,0 +1,298 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/*************************************body*************************************/
+body{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr ;
+    grid-template-rows: 100px 150px 1fr 100px;
+    grid-template-areas: 
+    "zh" "zn" "zs" "zf";
+    background-color: lightslategrey;
+
+}
+/*************************************header*************************************/
+header{
+    grid-area: zh;
+    background-color: white;
+    box-shadow: lightslategray 5px 5px;
+    margin: 5px;
+    border-radius: 15px;
+    color: black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    font-size: x-small;
+}
+
+#div_foto {
+    height: 90%;
+    margin-top: 5px;
+}
+#div_foto img{
+    height: 90%;
+}
+/*************************************NAV*************************************/
+nav{
+    grid-area: zn;
+    background-color: lightblue;
+    color: white;
+    border-radius: 15px;
+    box-shadow: lightslategray 5px 5px;
+    margin: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-evenly;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    font-size: 500px;
+}
+nav > div {
+    background-color: lightslategray;
+    font-size: 15px;
+    border-radius: 10px;
+    text-align: center;
+    font-family: "Goblin One", serif;
+    width: 100%; 
+    padding: 10px;
+    text-align: center;
+}
+
+nav > div:hover{
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+
+nav > #new_tema{
+    z-index: 10;
+}
+/*************************************SECTION*************************************/
+section{
+    grid-area: zs;
+    background-color:  lightcoral;
+    margin: 5px;
+    border-radius: 15px;
+    box-shadow: lightslategray 5px 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center; 
+    
+}
+section > div{
+    color: white;
+    background-color:  #fbfbfb ;
+    border-radius: 15px;
+    width: 100%;
+    height: 130px;
+    margin: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+section > div >img{
+    width: 100px;
+    height: 100px;
+    align-items: left;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+.nombre{
+    text-transform: uppercase;
+    font-size: 20px;
+    margin-top: 55px;
+    margin-left: 100px;
+    align-items: center;
+
+}
+
+.categoria{
+    font-size: 15px;
+    margin-top: 55px;
+    margin-left: 100px;
+    align-items: center;
+
+}
+
+/*************************************FOOTER*************************************/
+footer{
+    grid-area: zf;
+    background-color:  lightsteelblue;
+    color: black;
+    border-radius: 15px;
+    box-shadow: lightslategray 5px 5px;
+    margin: 5px;
+    display: flex;
+    padding-right: 20px;
+    justify-content: right;
+    align-items: center;
+    margin-bottom: 20px;
+}
+/*************************************TAMAÑOS DE PANTALLA*************************************/
+@media screen and (min-width: 900px){
+    /* Apartir de 900px, aplica estos cambios*/
+
+    /************************body*************************/
+    body{
+        grid-template-columns: 200px 1fr;
+        grid-template-rows: 100px 1fr 100px;
+        grid-template-areas: 
+        "zh zh" "zn zs" "zf zf";
+    }
+    /************************header**********************/
+    header{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+        font-size: medium ;
+    }
+        #div_foto {
+            height: 90%;
+            margin-top: 5px;
+        }
+        #div_foto img{
+            height: 90%;
+        }
+
+
+    section > div >img{
+        margin-top: 20px;
+        margin-left: 10px;
+    }
+    .nombre{
+        margin-top: 55px;
+        margin-left: 80px;
+    }
+    .categoria{
+        margin-top: 55px;
+        margin-left: 80px;
+    }
+}
+
+@media screen and (min-width: 1600px){
+    /* Apartir de 1200px, aplica estos cambios */
+
+    /************************body*************************/
+    body{
+        grid-template-columns: 200px 1fr 200px;
+        grid-template-rows: 100px 1fr 100px;
+        grid-template-areas: 
+        "zh zh zh" "zn zs za " "zf zf zf";
+    }
+    /**********************aside**************************/
+    aside{
+        grid-area: za;
+        background-color:  lightblue;
+        color: white;
+        border-radius: 15px;
+        box-shadow: lightslategray 5px 5px;
+        margin: 5px;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: space-evenly;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 10px;
+        font-size: 100px;
+    }
+
+    section > div >img{
+        margin-left: 5%;
+    }
+    .nombre{
+        margin-top: 60px;
+        margin-left: 5%;
+    }
+    .categoria{
+        font-size: 15px;
+        margin-top: 60px;
+        margin-left: 20%;
+    
+    }
+}
+/******************************************************LOGIN Y REGISTRARSE*******************************************************/
+#div_login{
+    font-size: 19px;
+}
+.resgistrar{
+    font-size: 19px;
+}
+.resgistrar:hover{
+    cursor: pointer;
+    font-size: 20px;
+    color: lightcoral;
+}
+#div_login:hover{
+    cursor: pointer;
+    font-size: 20px;
+    color: lightblue;
+}
+
+
+
+
+
+#div_modal {
+    display: none;
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    flex-wrap: flex;
+    justify-content: center;
+    align-items: center;
+}
+#div_modal > form {
+    border: 1px solid black;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 2px 2px 2px #444;
+}
+
+table{
+    height: 100px;
+    width: 400px;
+    font-family: "Aldrich", sans-serif;
+    font-weight: 600px;
+    font-style: normal;
+}
+
+.botonera{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+    font-family: "Aldrich", sans-serif;
+    font-weight: 600px;
+    font-style: normal;
+    color: #2B8F99;
+}
+.botonera :hover{
+    color: gray;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: "Aldrich", sans-serif;
+    font-weight: 650px;
+    font-style: normal;
+
+}
+#div_error{
+    color: red;
+    text-align: center;
+}
+
+#icono{
+    color: white;
+    height: 100px;
+    width: 100px;
+}
