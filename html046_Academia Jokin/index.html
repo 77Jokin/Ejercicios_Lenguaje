@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academia</title>
+    <link rel="stylesheet" href="assets/estilos/estilo.css">
+    <link rel="stylesheet" href="assets/fontawesome-free-5.15.4-web/css/all.css">
+    <link rel="stylesheet" href="assets/estilos/modal.css">
+    <script src="assets/scripts/script.js"></script>
+    <script src="assets/fontawesome-free-5.15.4-web/js/all.js"></script>
+</head>
+<body onload="fInicio()">
+    <div id="div_modal">
+        <!-- `cur_id`, `cur_nombre` -->
+        <div id="div_form_categorias">
+            <input type="hidden" id="cat_id">
+            <label for="cat_categoria">Categoria</label>
+            <input type="text" id="cat_categoria">
+            <label for="cat_color">Color</label>
+            <input type="text" id="cat_color">
+            <p id="cur_error" class="linea_error">ERROR</p>
+            <div class="botonera">
+                <div onclick="fOCultarModal()">Cancelar</div>
+                <div id="boton_categorias_grabar"      onclick="fCategoriasCRUD('a')">Grabar</div>
+                <div id="boton_categorias_eliminar"    onclick="fCategoriasCRUD('e')">Eliminar</div>
+                <div id="boton_categorias_modificar"   onclick="fCategoriasCRUD('m')">Modificar</div>
+            </div>
+        </div>
+        <!-- `as_id`, `as_nombre`, `as_cur_id` -->
+        <div id="div_form_preguntas">
+            <input type="hidden" id="pr_id">
+            <label for="pr_pregunta">Pregunta</label>
+            <input type="text" id="cat_categoria">
+            
+            <label for="as_cur_id">CURSO</label>
+            <!-- Aquí crearé el combo -->
+            <div id="as_curso"></div>
+            <p id="as_error" class="linea_error">ERROR</p>
+            <div class="botonera">
+                <div onclick="fOCultarModal()">Cancelar</div>
+                <div id="boton_preguntas_grabar"      onclick="fAsignaturasCRUD('a')">Grabar</div>
+                <div id="boton_preguntas_eliminar"    onclick="fAsignaturasCRUD('e')">Eliminar</div>
+                <div id="boton_preguntas_modificar"   onclick="fAsignaturasCRUD('m')">Modificar</div>
+            </div>
+        </div>
+    </div>
+
+    <header></header>
+    <nav>
+        <div onclick="fMostrarCategorias()">CATEGORIAS</div>
+        <div onclick="fMostrarPreguntas()">PREGUNTAS</div>
+    </nav>
+    <section>
+    </section>
+    <footer></footer>
+</body>
+</html>
